@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;        
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(30, 30, 30, 0.7);  
+    backdrop-filter: blur(10px); 
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.first-pic {
+    width: 60px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(122, 21, 21, 0.2);
+    border-radius: 5px;
+}
+
+
+/* Main content styles */
+main {
+    padding: 40px;
+    padding-top: 120px;
+    text-align: center;
+
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.about-content {
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.video-placeholder {
+    margin-top: 30px;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Ensures the footer doesn't overlap */
+}
+
+/* Optional: Add spacing between footer elements */
+.footer-contact h3, .footer-info p {
+    margin: 10px 0;
+}
+
+/* Style for the contact email link */
+.footer-contact a {
+    color: #f08a5d;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer container */
+.content-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The main content area */
+main {
+    flex: 1;
+}
+
+/* Footer positioning */
+footer {
+    position: relative;
+    bottom: 0;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center; /* Centers all icons in the footer */
+    gap: 20px; /* Ensures space between the icons */
+    margin-top: 20px;
+}
+
+
+.footer-social a {
+    display: inline-block;
+    text-align: center; /* Ensures the icons are centered in their container */
+}
+
+
+.footer-social img {
+    width: 40px;  /* Ensures the icon is exactly 40px */
+    height: 40px;  /* Ensures the icon is exactly 40px */
+    object-fit: contain;  /* Makes sure the images don't stretch */
+    border-radius: 50%; /* Makes the icons circular */
+    transition: transform 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Slightly enlarges icon on hover */
+}

@@ -1,0 +1,140 @@
+/* Resetting margins and paddings globally */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the body takes full height */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0; /* Ensure there's no margin causing space */
+    overflow: auto; /* Ensures scrolling */
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;        
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(30, 30, 30, 0.7);  
+    backdrop-filter: blur(10px); 
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.first-pic {
+    width: 60px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(122, 21, 21, 0.2);
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    padding-top: 70px; /* Ensure space for the fixed navbar */
+    background-color: antiquewhite;
+    color: black; 
+    text-align: center;
+    min-height: 100vh; /* Ensures it stretches the full height */
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Ensures the footer doesn't overlap */
+}
+
+/* Optional: Add spacing between footer elements */
+.footer-contact h3, .footer-info p {
+    margin: 10px 0;
+}
+
+/* Style for the contact email link */
+.footer-contact a {
+    color: #f08a5d;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.content-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The main content area */
+main {
+    flex: 1;
+}
+
+/* Footer positioning */
+footer {
+    position: relative; /* Footer stays at the bottom */
+    bottom: 0;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icons */
+}
+
+.footer-social a {
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 35px;  /* Adjust icon size */
+    height: 35px;
+    border-radius: 50%; /* Makes the icons circular */
+    transition
+}

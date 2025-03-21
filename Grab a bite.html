@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grab a Bite Cafe</title>
+    <link rel="stylesheet" href="Grab a bite cafe.css">
+    <link rel="icon" type="image/x-icon" href="Grab A Bite Logo.png">
+</head>
+<body>
+    <img src="Grab A Bite Logo.png" class="first-pic" >
+
+    <div class="blur-background"></div>
+
+    <div class="text-container">
+        <div class="fade-text welcome">Welcome</div>
+        <div class="fade-text to">to</div>
+        <div class="fade-text-combined">Grab a bite</div>
+    </div>
+
+    <a href="Home Page(index.html).html" target="_blank" class="button-link">
+        <button class="cup-button">
+            May I Take Your Order?
+            <div class="steam"></div>
+            <div class="steam"></div>
+            <div class="steam"></div>
+        </button>
+    </a>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background-image: url('pexels-apgpotr-683039.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+
+        .blur-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(5px);
+            z-index: -1;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column; /* Stack text vertically */
+            align-items: center; /* Center horizontally */
+            gap: 10px; /* Add some spacing between lines */
+        }
+
+        .fade-text, .fade-text-combined {
+            display: block; /* Make each text appear on its own line */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadein 1s ease-in forwards;
+            font-size: 80px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .welcome { 
+            color: #f5f5f5; 
+            animation-delay: 0s;
+        }
+
+        .to { 
+            color: #f5f5f5; 
+            animation-delay: 0.5s;
+        }
+
+        .fade-text-combined {
+            color: #ff6347;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cup-button {
+            margin-top: 30px; /* Push button lower */
+            padding: 20px 40px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: grab;
+            opacity: 0;
+            animation: fadein-button 1s ease-in forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes fadein-button {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cup-button:hover {
+            transform: scale(1.1);
+            background-color: #ff4500;
+            box-shadow: 0 8px 20px rgba(255, 99, 71, 0.5);
+        }
+
+        .cup-button:active {
+            transform: scale(0.98);
+            background-color: #ff3300;
+        }
+
+        .cup-button {
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .steam {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            opacity: 0;
+            animation: steam-animation 3s infinite ease-in-out;
+        }
+
+        .steam:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .steam:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .steam:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes steam-animation {
+            0% {
+                opacity: 0.8;
+                transform: translateY(0) scale(1);
+            }
+            30% {
+                opacity: 1;
+                transform: translateY(-20px) scale(1.2);
+            }
+            60% {
+                opacity: 0.5;
+                transform: translateY(-40px) scale(1.5);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-60px) scale(2);
+            }
+        }
+    </style>
+</body>
+</html>
